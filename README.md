@@ -14,7 +14,8 @@
   <a href="https://vibe-ai-labs.vibeailabs.workers.dev">Website</a> ·
   <a href="mailto:vibeailabs@gmail.com">vibeailabs@gmail.com</a> ·
   <a href="https://facebook.com/vibe.ai.labs">Facebook</a> ·
-  <a href="https://x.com/vibe_ai_labs">X</a>
+  <a href="https://x.com/vibe_ai_labs">X</a> ·
+  <a href="https://github.com/vibeailabs-tech/vibe-ai-labs-en">English</a>
 </p>
 
 ---
