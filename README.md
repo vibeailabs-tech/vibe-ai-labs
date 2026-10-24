@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="FILES/Groups's Cover Photo/Vibe AI Labs Logo.jpeg" alt="Vibe AI Labs" width="160">
+  <img src="05_Social-Covers/Vibe AI Labs Logo.jpeg" alt="Vibe AI Labs" width="160">
 </p>
 
 <h1 align="center">Vibe AI Labs</h1>
@@ -20,7 +20,7 @@
 
 ---
 
-Repo này là **kho tài sản tổng của Vibe AI Labs**: hồ sơ năng lực, bộ nhận diện thương hiệu, ấn phẩm dịch vụ, website, và các AI agent nội bộ dùng để vận hành Marketing × AI × Creative. Nội dung giới thiệu bên dưới lấy từ [Hồ sơ năng lực (VI)](1.%20General/Vibe_AI_Labs_Company_Profile_VI.pdf).
+Repo này là **kho tài sản tổng của Vibe AI Labs**: hồ sơ năng lực, bộ nhận diện thương hiệu, ấn phẩm dịch vụ, website, và các AI agent nội bộ dùng để vận hành Marketing × AI × Creative. Nội dung giới thiệu bên dưới lấy từ [Hồ sơ năng lực (VI)](01_General/01_Company-Profile/Vibe_AI_Labs_Company_Profile_VI.pdf).
 
 ## Mục lục
 
@@ -292,21 +292,32 @@ Lưu ý: Aqua không dùng làm màu chữ trên nền sáng. Logo SVG hiện l�
 
 # Phần B — Cấu trúc repo
 
+![Sơ đồ thư mục](00_Folder-Map.png)
+
 ```
 VIBE AI LABS/
-├── 1. General/                 Tài liệu bán hàng chính thức (VI · EN · ZH)
-├── Brandkit/                   Bộ nhận diện thương hiệu
-│   ├── 1. General Brandkit/    Brand Kit v2.0 đầy đủ
-│   └── 2. Brandkit Designer/   Kit cho team design làm poster
-├── FILES/                      Nguồn làm việc, script build, ảnh bìa group
-├── Services/                   Ấn phẩm giới thiệu 3 nhóm dịch vụ
-├── Vibe AI Labs Deck/          Company Profile (VI · EN · ZH)
-├── Vibe AI Labs Tools/         AI agent & skill nội bộ
-├── website/                    Website + brandkit đi kèm
-└── Design Brief Skill (empty).zip
+├── 00_Folder-Map.png           Sơ đồ thư mục cấp 1
+├── 01_General/                 Tài liệu chung
+│   ├── 01_Company-Profile/     Hồ sơ năng lực, One Pager, mẫu đề xuất (VI · EN · ZH)
+│   └── 02_Brand-Build-Source/  Hồ sơ thương hiệu .docx, script build brandkit, poster, ghi chú
+├── 02_Brandkit/                Bộ nhận diện thương hiệu
+│   ├── 01_General-Brandkit/    Brand Kit v2.0 đầy đủ (nguồn chuẩn)
+│   └── 02_Designer-Kit/        Kit cho team design làm poster
+├── 03_Decks/
+│   └── 01_Community-Events/    Deck Community & Events + Outreach Kit
+├── 04_Services/                Ấn phẩm giới thiệu 3 nhóm dịch vụ
+├── 05_Social-Covers/           Logo và ảnh bìa group Facebook
+├── 06_AI-Tools/                AI agent & skill nội bộ
+│   ├── 01_AI-Agents/
+│   ├── 02_Vibe-Working/
+│   └── 03_Personal-Agents/
+└── 07_Website/
+    └── vibe-ai-labs/           Mã nguồn website (submodule)
 ```
 
-## `1. General/` — Tài liệu bán hàng
+## `01_General/`
+
+### `01_Company-Profile/` — Tài liệu bán hàng
 
 | File | Mô tả |
 |---|---|
@@ -314,13 +325,19 @@ VIBE AI LABS/
 | `Vibe_AI_Labs_One_Pager_VI.pdf` · `_EN.pdf` · `_ZH.pdf` | Bản giới thiệu một trang |
 | `Vibe_AI_Labs_Proposal_Template_VI.pdf` · `.docx` | Mẫu đề xuất dự án (bản PDF và bản sửa được) |
 
-## `Vibe AI Labs Deck/`
+### `02_Brand-Build-Source/` — Nguồn dựng thương hiệu
 
-Bản Company Profile VI · EN · ZH dùng để trình bày (deck).
+| Mục | Mô tả |
+|---|---|
+| `Vibe AI Labs .docx` (+ `.bak`) | Hồ sơ thương hiệu 34 mục (tiếng Việt) và bản gốc |
+| `_tools/` | Script build bằng Python: `brandbuild/` (logo, brandkit, render), `dk/` (engine poster R1–R6, playbook, cheat sheet), `trace_data/`, `assets/`, `pdf_to_png.swift`, `setup.sh`, `requirements.txt` |
+| `posts/` | Poster Facebook đã làm |
+| `Vibe_AI_Labs_Design_Team_Kit.zip` | Bản nén Design Team Kit (chỉ giữ trên máy) |
+| `CLAUDE.md` | Ghi chú làm việc |
 
-## `Brandkit/` — Bộ nhận diện
+## `02_Brandkit/` — Bộ nhận diện
 
-### `1. General Brandkit/` (Brand Kit v2.0, ~430 file)
+### `01_General-Brandkit/` (Brand Kit v2.0, ~430 file)
 
 | Thư mục | Nội dung |
 |---|---|
@@ -336,7 +353,7 @@ Bản Company Profile VI · EN · ZH dùng để trình bày (deck).
 | `09_Brand_Tokens` | `brand-tokens.json`, `design-tokens.w3c.json`, `tailwind.config.js`, `tokens.css` |
 | `99_Reference` | Tài liệu tham chiếu |
 
-### `2. Brandkit Designer/` (Design Team Kit, ~460 file)
+### `02_Designer-Kit/` (Design Team Kit, ~460 file)
 
 | Thư mục | Nội dung |
 |---|---|
@@ -345,20 +362,20 @@ Bản Company Profile VI · EN · ZH dùng để trình bày (deck).
 | `03_Poster_Templates` | 6 layout R1–R6 (Announcement · Insight list · Pillars · Stat · Quote · Event) × 4 tỉ lệ (1:1 · 4:5 · 9:16 · 16:9) × dark/light = 48 SVG + PNG; `Print_A3`; `Guides` vùng an toàn |
 | `04_Components` · `05_Backgrounds` · `06_Icons` | Thành phần, nền, icon |
 | `07_Copy_Library` | Thư viện câu chữ |
-| `08_Export_Handoff` | Thông số xuất file, QA checklist, brief |
+| `08_Export_Handoff` | Thông số xuất file, QA checklist, brief mẫu, brief poster Hermes Agent |
 | `09_Reference` | Tài liệu tham chiếu |
 
-Bản nén `2. Brandkit Designer.zip` (81 MB) chỉ giữ trên máy, không đưa lên repo — nén lại thư mục này khi cần gửi designer.
+Bản nén `02_Designer-Kit.zip` (81 MB) chỉ giữ trên máy, không đưa lên repo.
 
-## `FILES/`
+## `03_Decks/01_Community-Events/` — Deck chào hợp tác dự án AI
 
 | Mục | Mô tả |
 |---|---|
-| `vibe_ai_labs_brandkit_building/` | Nơi dựng brandkit: `brandkit/` (nguồn chuẩn), `Vibe_AI_Labs_Design_Team_Kit/`, `Vibe AI Labs .docx` (hồ sơ thương hiệu 34 mục) và bản `.bak`, `posts/`, `CLAUDE.md` (ghi chú làm việc) |
-| `vibe_ai_labs_brandkit_building/_tools/` | Script build bằng Python: `brandbuild/` (logo, brandkit, render), `dk/` (engine poster R1–R6, playbook, cheat sheet), `trace_data/`, `pdf_to_png.swift`, `setup.sh`, `requirements.txt` |
-| `Groups's Cover Photo/` | Logo và ảnh bìa cho các group Facebook (AI Agent Việt Nam, AI Agent Marketing, Vibe Marketing Việt Nam, ChatGPT Ads, khách Trung Quốc, banner tăng trưởng) |
+| `Outreach_Kit/` | Deck **Vibe AI Community & Events** (EN, 15 slide) và mẫu tin nhắn outreach cho mọi kênh, dưới tên Vibe AI Labs và Henry Le |
+| `01_Noi-dung-deck_Community-Events_VI.md` | Nội dung, chiến lược và nguồn số liệu của deck |
+| `_build/` | Script build deck: `python3 _build/build_deck.py` |
 
-## `Services/` — Ấn phẩm dịch vụ
+## `04_Services/` — Ấn phẩm dịch vụ
 
 | File | Mô tả |
 |---|---|
@@ -367,11 +384,15 @@ Bản nén `2. Brandkit Designer.zip` (81 MB) chỉ giữ trên máy, không đ�
 | `III. THIẾT KẾ & SÁNG TẠO.png` | Infographic dịch vụ Thiết kế & Sáng tạo |
 | `dv1_marketing-so_4x5.png` · `dv2_ai-tu-dong-hoa_4x5.png` · `dv3_thiet-ke-sang-tao_1x1.png` | Bản cắt cho mạng xã hội |
 
-## `Vibe AI Labs Tools/` — AI agent & skill
+## `05_Social-Covers/`
+
+Logo và ảnh bìa cho các group Facebook (AI Agent Việt Nam, AI Agent Marketing, Vibe Marketing Việt Nam, ChatGPT Ads, khách Trung Quốc, banner tăng trưởng).
+
+## `06_AI-Tools/` — AI agent & skill
 
 Phần lớn chạy trên **Claude Code** dưới dạng skill/command bằng markdown, không cần cài đặt.
 
-### `AI/`
+### `01_AI-Agents/`
 
 | Agent | Chức năng | Cách chạy |
 |---|---|---|
@@ -379,16 +400,16 @@ Phần lớn chạy trên **Claude Code** dưới dạng skill/command bằng ma
 | `brand-voice-cloning/` | 6 skill phân tích mẫu nội dung → Brand Voice Card (JSON + Markdown) 10 chiều | Theo `CLAUDE.md` |
 | `facebook-content-agent/` | Orchestrator + 29 skill viết, tối ưu, kiểm duyệt bài Facebook | `/fb-content-agent [yêu cầu]` |
 | `linkedin-content-agent/` | Orchestrator + 33 skill cho LinkedIn (bài viết, carousel, reply, kế hoạch tháng) | `/li-content-agent [yêu cầu]` |
-| `content-agent/` | Một chủ đề → 8 bài viết riêng cho từng nền tảng (4 lớp: customer → platforms → engine → voice → feedback) | Upload vào Claude Project, đọc `01-START_HERE.md` |
+| `content-agent/` | Một chủ đề → 8 bài viết riêng cho từng nền tảng (customer → platforms → engine → voice → feedback) | Upload vào Claude Project, đọc `01-START_HERE.md` |
 | `claude-design-prompter/` | Hỏi đúng câu rồi viết prompt hoàn chỉnh cho Claude Design | Dán `ORCHESTRATOR.md` vào Claude |
 | `general-service/` | Bản thiết kế kiến trúc AI Marketing Agent Team: 16 agent + orchestrator, 4 lớp, 43 skill | Tài liệu, chưa phải mã chạy được |
 | `ai-marketing-automation-stack/` | Bộ skill bên thứ ba (submodule): `claude-seo`, `claude-ads`, `claude-blog`, `banana-claude`, `claude-obsidian`, `claude-cybersecurity` | Xem README từng repo |
 
-### `Vibe AI Labs Working/`
+### `02_Vibe-Working/`
 
 Bản đã tùy biến cho chính Vibe AI Labs: `brandvoice/vibe_ai_labs_voice_card.md` (voice card của Vibe AI Labs), `facebook-content-agent/`, `linkedin-content-agent/`, `claude-design-prompter/` (có `memory/brand-context.json`).
 
-### `Personal Agents/`
+### `03_Personal-Agents/`
 
 | Mục | Mô tả |
 |---|---|
@@ -396,17 +417,13 @@ Bản đã tùy biến cho chính Vibe AI Labs: `brandvoice/vibe_ai_labs_voice_c
 | `agent-skills-working/skills-main/` | Bộ skill mẫu của Anthropic (frontend-design, skill-creator, mcp-builder…), Apache 2.0. Bốn skill `docx`, `pdf`, `pptx`, `xlsx` là source-available, không được phát hành lại nên không có trong repo — tải tại [github.com/anthropics/skills](https://github.com/anthropics/skills) |
 | `agent-skills-working/vibe-skill-creator/` | Hướng dẫn tạo skill theo chuẩn Vibe AI Labs, kèm mẫu lỗi thường gặp và ví dụ cold outreach |
 
-## `website/`
-
-| Mục | Mô tả |
-|---|---|
-| `vibe_ai_labs_website/website/vibe-ai-labs/` | **Submodule** → [`vibeailabs-tech/vibe-ai-labs-website`](https://github.com/vibeailabs-tech/vibe-ai-labs-website) (private). Next.js 16 qua vinext, Cloudflare Workers, D1 + Drizzle, 3 ngôn ngữ VI/EN/ZH. Live: https://vibe-ai-labs.vibeailabs.workers.dev |
-| `vibe_ai_labs_website/brandkit/` | Bản sao brandkit dùng cho website |
-| `vibe_ai_labs_website/Vibe AI Labs .docx` | Brief công ty dùng khi làm website |
-
-## `Design Brief Skill (empty).zip`
+### `Design-Brief-Skill.zip`
 
 Khung skill "design brief" cho Claude (SKILL.md, script đọc PDF, thư mục brandkit trống để điền).
+
+## `07_Website/vibe-ai-labs/`
+
+**Submodule** → [`vibeailabs-tech/vibe-ai-labs-website`](https://github.com/vibeailabs-tech/vibe-ai-labs-website) (private). Next.js 16 qua vinext, Cloudflare Workers, D1 + Drizzle, 3 ngôn ngữ VI/EN/ZH. Live: https://vibe-ai-labs.vibeailabs.workers.dev. Brandkit dùng chung tại `02_Brandkit/01_General-Brandkit/`.
 
 ---
 
@@ -424,8 +441,8 @@ git submodule update --init --recursive
 
 | Đường dẫn | Repo |
 |---|---|
-| `website/vibe_ai_labs_website/website/vibe-ai-labs` | vibeailabs-tech/vibe-ai-labs-website |
-| `Vibe AI Labs Tools/AI/ai-marketing-automation-stack/claude-seo` | AgriciDaniel/claude-seo |
+| `07_Website/vibe-ai-labs` | vibeailabs-tech/vibe-ai-labs-website |
+| `06_AI-Tools/01_AI-Agents/ai-marketing-automation-stack/claude-seo` | AgriciDaniel/claude-seo |
 | `…/claude-ads` | AgriciDaniel/claude-ads |
 | `…/claude-blog` | AgriciDaniel/claude-blog |
 | `…/banana-claude` | AgriciDaniel/banana-claude |
@@ -439,16 +456,16 @@ git submodule update --init --recursive
 ### Build lại brandkit / poster
 
 ```bash
-cd "FILES/vibe_ai_labs_brandkit_building"
+cd "01_General/02_Brand-Build-Source"
 bash _tools/setup.sh            # khôi phục script vào /tmp
 ```
 
-Máy cần Google Chrome (render SVG → PNG, HTML → PDF) và Python 3. Chi tiết trong `FILES/vibe_ai_labs_brandkit_building/CLAUDE.md`.
+Máy cần Google Chrome (render SVG → PNG, HTML → PDF) và Python 3. Chi tiết trong `01_General/02_Brand-Build-Source/CLAUDE.md`.
 
 ### Website
 
 ```bash
-cd website/vibe_ai_labs_website/website/vibe-ai-labs
+cd 07_Website/vibe-ai-labs
 npm install
 npm run dev       # http://localhost:3000
 npm run deploy    # build + Cloudflare Workers
